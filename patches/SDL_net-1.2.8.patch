@@ -1,0 +1,24 @@
+diff -burN SDL_net-1.2.8/SDLnetsys.h SDL_net-1.2.8-PS3/SDLnetsys.h
+--- SDL_net-1.2.8/SDLnetsys.h	2012-01-15 11:20:10.000000000 -0500
++++ SDL_net-1.2.8-PS3/SDLnetsys.h	2013-12-19 00:27:58.677923732 -0500
+@@ -48,7 +48,10 @@
+ #ifdef __FreeBSD__
+ #include <sys/socket.h>
+ #endif
++#ifndef __lv2ppu__
+ #include <sys/ioctl.h>
++#include <net/if.h>
++#endif
+ #include <sys/time.h>
+ #include <unistd.h>
+ #include <fcntl.h>
+@@ -59,8 +62,8 @@
+ #ifdef linux /* FIXME: what other platforms have this? */
+ #include <netinet/tcp.h>
+ #endif
++#include <netdb.h>
+ #include <sys/socket.h>
+-#include <net/if.h>
+ #include <netdb.h>
+ #endif /* WIN32 */
+ 
