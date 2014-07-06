@@ -1,8 +1,3 @@
-
-http://www.libsdl.org/projects/SDL_ttf/release/SDL_ttf-2.0.11.tar.gz
-
-
-
 #!/bin/sh -e
 # SDL_ttf-2.0.11.sh by unknown (Updated by Spork Schivago)
 
